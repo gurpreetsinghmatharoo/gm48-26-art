@@ -4,7 +4,7 @@ Create oCollision object with a square sprite. The square sprite's origin must b
 
 In the room, place this object and scale it to fill a space - don't tile it.
 
-Import my grass tileset and don't apply it to the object, let it have the square sprite.
+Import my grass tileset sprite and don't apply it to the object, let it have the square sprite.
 
 • Create this script called draw_9slice:
 
