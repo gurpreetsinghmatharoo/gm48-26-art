@@ -1,5 +1,39 @@
 Create an object called oManager.
 
-Create event:
+Create event event:
 
 global.cellSize = 16;
+
+global.gGrid = ds_grid_create(room_width div global.cellSize, room_height div global.cellSize);
+
+global.gSurf = -1;
+gBuff = buffer_create(room_width * room_height * 4, buffer_fixed, 0);
+
+buffed = false;
+
+alarm[0] = room_speed;
+
+Alarm 0 event:
+
+if (surface_exists(global.gSurf)){
+	buffer_get_surface(gBuff, global.gSurf, 0, 0, 0);
+	buffed = true;
+}
+
+Draw Begin event:
+
+if (!surface_exists(global.gSurf)){
+	global.gSurf = surface_create(room_width, room_height);
+	
+	if (buffed){
+		buffer_set_surface(
+	}
+}
+
+Room End event:
+
+if (surface_exists(global.gSurf)){
+	surface_free(global.gSurf);
+}
+
+buffer_delete(gBuff);
